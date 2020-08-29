@@ -5,12 +5,14 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { GitNavbarComponent } from './git-navbar/git-navbar.component';
 import { FooterComponent } from './footer/footer.component';
+import { GitDetailsComponent } from './git-details/git-details.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     GitNavbarComponent,
-    FooterComponent
+    FooterComponent,
+    GitDetailsComponent
   ],
   imports: [
     BrowserModule,
