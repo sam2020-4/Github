@@ -1,6 +1,60 @@
 <!-- home-page contains all details-->
-<div>
-    <h1 style="text-align: center">Welcome to Github Search APP</h1>    
-    <p class="text-center">This is an Application that let's you find Your Profile and Repository</p>
+<div class="homepage">
+  <br> <br>
+  <div>
+      <h1 style="text-align: center">Welcome to Github Search APP</h1>    
+      <p class="text-center">This is an Application that let's you find Your Profile and Repository</p>
   </div>
 
+  <!-- displaying the search button -->
+  <div class="container">
+      <app-git-form (emitSearch)="searchGit($event)"></app-git-form>
+  </div>
+
+  <!-- displaying contents -->
+  <hr class="my-4">
+  <div class="container">
+    <div class="row">
+      <!-- display github info -->
+      <div class="col-md-6">           
+        <div class="card" style="width: 33rem;">
+          <div class="card-header">
+                <h4 class="text-center">GITHUB PROFILE DETAILS</h4> 
+          </div>
+          <ul class="list-group list-group-flush">
+            <div *ngFor="let github of githubs"> 
+              <div>
+                <li class="list-group-item">Name: &nbsp; {{github.name}}</li>
+                  <li class="list-group-item">Username: &nbsp; {{github.login}}</li>
+                    <li class="list-group-item">Bio: &nbsp; {{github.bio}}</li>  
+                      <li class="list-group-item">Public Repos:&nbsp; {{github.public_repos}}</li>
+                        <li class="list-group-item">Followers:&nbsp; {{github.followers}}</li>
+                        <li class="list-group-item">Following:&nbsp;{{github.following}}</li>
+                      <li class="list-group-item">Location:&nbsp;{{github.location}}</li>
+                    <li class="list-group-item">Join Date:&nbsp; {{github.created_at |date}}</li>
+                  <li class="list-group-item"><a href="{{github.html_url}}" target="_blank"><button type="button" class=" text-center btn btn-info">
+                <i class="far fa-user pr-2" aria-hidden="true"></i>View Profile on Github</button></a><br></li>
+              </div>                              
+            </div>
+          </ul>
+        </div>             
+      </div>
+      <!-- displaying avatar image -->     
+      <div class="col-md-6 p-2">
+        <div class="card">
+          <h4 class="text-center">PROFILE IMAGE</h4>
+          <div class="container">
+            <div>
+              <div *ngFor="let github of githubs">                
+                <div class="text-center">
+                  <img src="{{github.avatar_url}}" width="300" height="300">
+                  <br> <br>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>      
+      </div>
+    </div>
+  </div>
+</div>

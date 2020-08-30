@@ -1,0 +1,36 @@
+<!-- <body> -->
+    <div class="bg">
+        <div>
+          <h1 style="text-align: center">Welcome to Repositories</h1>
+          <hr>
+          <p class="lead text-center">Type in your username:</p>
+        </div>
+              
+        <div class="container">
+          <app-git-form (emitSearch)="searchRepo($event)"></app-git-form>
+          <hr>
+        </div>
+      
+        <!-- This is the section for displaying user profiles -->
+        <h2 class="text-center"> GITHUB REPOSITORIES </h2>
+        <div class="container card-columns">
+          <div class="card" *ngFor="let gitrepo of gitrepos">
+            <div class="card">
+              <div class="card-header">
+                <h2>{{gitrepo.name}}</h2>
+              </div>
+              <div class="card-body">
+                <p class="card-text"><strong>Description: </strong>{{gitrepo.description}}</p>
+                <p class="card-text"><strong>Create at: </strong>{{gitrepo.created_at|date}}</p>
+                <p class="card-text"> <strong>Language: </strong> {{gitrepo.language}}.</p>
+                <!-- Button -->
+                <a href="{{gitrepo.html_url}}" target="_blank" class="btn btn-default">Check it on Github</a><br>
+              </div><br>
+              <div class="">
+                <small class="text-muted"><strong>Branch: </strong>{{gitrepo.default_branch}} </small>
+                <small class="text-muted ml-4"><strong> Forks: </strong>{{gitrepo.forks_count}}</small>      
+              </div>
+            </div>
+          </div>
+        </div>
+      

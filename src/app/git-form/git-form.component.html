@@ -1,0 +1,14 @@
+<!-- <p>git-form works!</p> -->
+<div class="container text-center">
+  <div class="row">
+    <label for="filerusernam" class="col-12 col-sm-2 col-form-label">Enter Github ID</label>
+    <form class="form-inline mb-4 text-center active-cyan-3 active-cyan-4">
+      <div class="col-8">
+        <input type="text" class=" form-control form-control-sm ml-3 w-75" rows="4" placeholder="Enter a Github Username" name="searchTerm" [(ngModel)]="searchTerm">
+      </div>
+      <div class="col-4">
+         <button type="submit" class="btn btn-md btn-primary" (click)="search()" name="button"><i class="fas fa-search"></i>Search </button> 
+      </div>        
+    </form> 
+  </div> 
+</div>
