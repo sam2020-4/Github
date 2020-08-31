@@ -2,6 +2,33 @@
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 10.0.6.
 
+## Description
+
+A single page application for searching github users and repositories. The site uses the Github API to perform searches on Github, and display the results to the users. A link to my live page: https://sam2020-4.github.io/Github/
+
+## Author
+
+Matata Samuel
+
+## Behaviour Driven Development BDD
+
+### Functions of the Web application
+
+1.The app should be able to allow the user to enter github user id and then his/her profile get displayed by the app. 2.It has also provided a form to help users Input their username and view the Repositories.
+
+## Setup/Installation requirements
+P
+1.Clone or download and unzip the repository from github, https://github.com/sam2020-4/Github. 2.You can use this command (git clone my link) to clone the project to your machine if you have git . 3.Run ng serve -o from your terminal to compile and open the web app.
+
+## Technologies used
+
+*Angular CLI
+
+
+# Github
+
+This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 10.0.6.
+
 ## Development server
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
