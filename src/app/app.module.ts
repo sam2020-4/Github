@@ -25,6 +25,7 @@ import { RepositoriesComponent } from './repositories/repositories.component';
     AppRoutingModule,
     HttpClientModule,
     FormsModule
+    // FooterComponent
   ],
   providers: [],
   bootstrap: [AppComponent]
