@@ -22,7 +22,7 @@ P
 
 ## Technologies used
 
-*Angular CLI
+*Angular CLI,
 
 
 # Github
